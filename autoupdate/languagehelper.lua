@@ -1,6 +1,6 @@
 script_name("LanguageHelper") -- название скрипта
 script_author("sunbakes (Hannah Murphy)") -- автор скрипта
-script_version("2.0") -- версия скрипта
+script_version("1.0") -- версия скрипта
 script_description[[
 ]] -- описание скрипта
 
@@ -50,12 +50,16 @@ function main()
 	sampRegisterChatCommand("langreload", reloadScript) -- регистрация команды
 
 	-- логи о запуске
-	sampAddChatMessage("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}1.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)", main_color)
+	sampAddChatMessage("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}" .. script.this.version .. " | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)", main_color)
 	sampAddChatMessage("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp", main_color)
 	print("Успешный запуск скрипта.")
 
 	_, id = sampGetPlayerIdByCharHandle(PLAYER_PED) -- регистрация id игрока
 	nick = sampGetPlayerNickname(id) -- вычисление ника по айди
+
+	if autoupdate_loaded and enable_autoupdate and Update then
+        pcall(Update.check, Update.json_url, Update.prefix, Update.url)
+    end
 
 	while true do
 		wait(0)
