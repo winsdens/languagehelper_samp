@@ -2,7 +2,6 @@ script_name("LanguageHelper") -- название скрипта
 script_author("sunbakes (Hannah Murphy)") -- автор скрипта
 script_version("1.0") -- версия скрипта
 script_description[[
-{5A90CE}Система абонентского контроля.
 ]] -- описание скрипта
 
 require "lib.moonloader" -- подключение библиотеки
