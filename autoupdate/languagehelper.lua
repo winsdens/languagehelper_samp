@@ -1,6 +1,6 @@
 script_name("LanguageHelper") -- название скрипта
 script_author("sunbakes (Hannah Murphy)") -- автор скрипта
-script_version("1.0") -- версия скрипта
+script_version("2.0") -- версия скрипта
 script_description[[
 ]] -- описание скрипта
 
@@ -161,7 +161,7 @@ function langhelp_func()
 	-- французский [FR], арабский [AR], армянский [HY], эсперанто [EO]
 	-- все команды пишутся с маленькой буквы
 	-- всего языков 11
-	sampShowDialog(10001, u8:decode("{5A90CE}Информация - LangHelper", "{5A90CE}Итальянский: {d5dedd}/ita\n{5A90CE}Японский: {d5dedd}/jpn\n{5A90CE}Китайский: {d5dedd}/zh\n{5A90CE}Русский: {d5dedd} /rus\n{5A90CE}Немецкий: {d5dedd}/de\n{5A90CE}Испанский: {d5dedd}/es\n{5A90CE}Азербайджанский: {d5dedd}/az\n{5A90CE}Французский: {d5dedd}/fr\n{5A90CE}Арабский: {d5dedd}/ar\n{5A90CE}Армянский: {d5dedd}/hy\n{5A90CE}Эсперанто: {d5dedd}/eo\n\n{d5dedd}В скрипт добавлено {5A90CE}11 языков."), u8:decode("Выбрать"), u8:decode("Закрыть"), 0)
+	sampShowDialog(10001, u8:decode("{5A90CE}Информация - LangHelper"), u8:decode("{5A90CE}Итальянский: {d5dedd}/ita\n{5A90CE}Японский: {d5dedd}/jpn\n{5A90CE}Китайский: {d5dedd}/zh\n{5A90CE}Русский: {d5dedd} /rus\n{5A90CE}Немецкий: {d5dedd}/de\n{5A90CE}Испанский: {d5dedd}/es\n{5A90CE}Азербайджанский: {d5dedd}/az\n{5A90CE}Французский: {d5dedd}/fr\n{5A90CE}Арабский: {d5dedd}/ar\n{5A90CE}Армянский: {d5dedd}/hy\n{5A90CE}Эсперанто: {d5dedd}/eo\n\n{d5dedd}В скрипт добавлено {5A90CE}11 языков."), u8:decode("Выбрать"), u8:decode("Закрыть"), 0)
 end
 
 function reloadScript()
