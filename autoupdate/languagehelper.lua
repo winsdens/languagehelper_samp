@@ -50,7 +50,7 @@ function main()
 	sampRegisterChatCommand("langreload", reloadScript) -- регистрация команды
 
 	-- логи о запуске
-	sampAddChatMessage("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}" .. script.this.version .. " | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)", main_color)
+	sampAddChatMessage("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}2.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)", main_color)
 	sampAddChatMessage("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp", main_color)
 	print("Успешный запуск скрипта.")
 
