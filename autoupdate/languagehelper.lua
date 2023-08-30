@@ -11,6 +11,7 @@ local encoding = require 'encoding'
 local sampev = require 'lib.samp.events'
 encoding.default = 'CP1251'
 u8 = encoding.UTF8
+cp1251 = encoding.CP1251
 
 local tag = "[LanguageHelper]"
 local main_color = 0x5A90CE
@@ -50,8 +51,8 @@ function main()
 	sampRegisterChatCommand("langreload", reloadScript) -- регистрация команды
 
 	-- логи о запуске
-	sampAddChatMessage("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}2.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)", main_color)
-	sampAddChatMessage("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp", main_color)
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}2.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)"), main_color)
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp"), main_color)
 	print("Успешный запуск скрипта.")
 
 	_, id = sampGetPlayerIdByCharHandle(PLAYER_PED) -- регистрация id игрока
@@ -160,7 +161,7 @@ function langhelp_func()
 	-- французский [FR], арабский [AR], армянский [HY], эсперанто [EO]
 	-- все команды пишутся с маленькой буквы
 	-- всего языков 11
-	sampShowDialog(10001, "{5A90CE}Информация - LangHelper", "{5A90CE}Итальянский: {d5dedd}/ita\n{5A90CE}Японский: {d5dedd}/jpn\n{5A90CE}Китайский: {d5dedd}/zh\n{5A90CE}Русский: {d5dedd} /rus\n{5A90CE}Немецкий: {d5dedd}/de\n{5A90CE}Испанский: {d5dedd}/es\n{5A90CE}Азербайджанский: {d5dedd}/az\n{5A90CE}Французский: {d5dedd}/fr\n{5A90CE}Арабский: {d5dedd}/ar\n{5A90CE}Армянский: {d5dedd}/hy\n{5A90CE}Эсперанто: {d5dedd}/eo\n\n{d5dedd}В скрипт добавлено {5A90CE}11 языков.", "Выбрать", "Закрыть", 0)
+	sampShowDialog(10001, u8:decode("{5A90CE}Информация - LangHelper", "{5A90CE}Итальянский: {d5dedd}/ita\n{5A90CE}Японский: {d5dedd}/jpn\n{5A90CE}Китайский: {d5dedd}/zh\n{5A90CE}Русский: {d5dedd} /rus\n{5A90CE}Немецкий: {d5dedd}/de\n{5A90CE}Испанский: {d5dedd}/es\n{5A90CE}Азербайджанский: {d5dedd}/az\n{5A90CE}Французский: {d5dedd}/fr\n{5A90CE}Арабский: {d5dedd}/ar\n{5A90CE}Армянский: {d5dedd}/hy\n{5A90CE}Эсперанто: {d5dedd}/eo\n\n{d5dedd}В скрипт добавлено {5A90CE}11 языков."), "Выбрать", "Закрыть", 0)
 end
 
 function reloadScript()
