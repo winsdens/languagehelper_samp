@@ -1,6 +1,6 @@
 script_name("LanguageHelper") -- название скрипта
 script_author("sunbakes (Hannah Murphy)") -- автор скрипта
-script_version("1.2") -- версия скрипта
+script_version("1.3") -- версия скрипта
 script_description[[
 ]] -- описание скрипта
 
