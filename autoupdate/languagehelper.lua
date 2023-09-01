@@ -32,6 +32,10 @@ if enable_autoupdate then
     end
 end
 
+function langversion_func()
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Версия скрипта: 3.0"), main_color)
+end
+
 function main()
 	if not isSampLoaded() or not isSampfuncsLoaded() then return end
 	while not isSampAvailable() do wait(100) end
@@ -163,10 +167,6 @@ function langhelp_func()
 	-- все команды пишутся с маленькой буквы
 	-- всего языков 11
 	sampShowDialog(10001, u8:decode("{5A90CE}Информация - LangHelper"), u8:decode("{5A90CE}Итальянский: {d5dedd}/ita\n{5A90CE}Японский: {d5dedd}/jpn\n{5A90CE}Китайский: {d5dedd}/zh\n{5A90CE}Русский: {d5dedd} /rus\n{5A90CE}Немецкий: {d5dedd}/de\n{5A90CE}Испанский: {d5dedd}/es\n{5A90CE}Азербайджанский: {d5dedd}/az\n{5A90CE}Французский: {d5dedd}/fr\n{5A90CE}Арабский: {d5dedd}/ar\n{5A90CE}Армянский: {d5dedd}/hy\n{5A90CE}Эсперанто: {d5dedd}/eo\n\n{d5dedd}В скрипт добавлено {5A90CE}11 языков."), u8:decode("Выбрать"), u8:decode("Закрыть"), 0)
-end
-
-function langversion_func()
-	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Версия скрипта: 3.0"), main_color)
 end
 
 function reloadScript()
