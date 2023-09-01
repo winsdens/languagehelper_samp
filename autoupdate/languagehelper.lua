@@ -1,6 +1,6 @@
 script_name("LanguageHelper") -- название скрипта
 script_author("sunbakes (Hannah Murphy)") -- автор скрипта
-script_version("2.0") -- версия скрипта
+script_version("3.0") -- версия скрипта
 script_description[[
 ]] -- описание скрипта
 
@@ -51,7 +51,7 @@ function main()
 	sampRegisterChatCommand("langreload", reloadScript) -- регистрация команды
 
 	-- логи о запуске
-	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}2.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)"), main_color)
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}3.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)"), main_color)
 	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp"), main_color)
 	print("Успешный запуск скрипта.")
 
@@ -165,5 +165,6 @@ function langhelp_func()
 end
 
 function reloadScript()
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Выполняем перезагрузку скрипта."), main_color)
 	thisScript():reload()
 end
