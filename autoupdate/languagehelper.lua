@@ -33,7 +33,7 @@ if enable_autoupdate then
 end
 
 function langversion_func()
-	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Версия скрипта: 4.0"), main_color)
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Версия скрипта: 1.3"), main_color)
 end
 
 function main()
@@ -56,7 +56,7 @@ function main()
 	sampRegisterChatCommand("langreload", reloadScript) -- регистрация команды
 
 	-- логи о запуске
-	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}4.0 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)"), main_color)
+	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - LangHelper {d5dedd}успешно загружен. | {5A90CE}Версия: {d5dedd}1.3 | {5A90CE}Автор: {d5dedd}sunbakes (Hannah Murphy)"), main_color)
 	sampAddChatMessage(u8:decode("{5A90CE}" .. tag .. " - Для получения помощи используйте: {d5dedd}/langhelp"), main_color)
 	print("Успешный запуск скрипта.")
 
